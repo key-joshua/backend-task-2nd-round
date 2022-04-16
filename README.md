@@ -85,7 +85,7 @@ npm install
 
 - And then to start running  this project on your machine , run this command:
 ```
-npm run server
+npm run start
  ```
 
 - then to run test, run this commands:
