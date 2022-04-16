@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  backend-task-2nd-round-container:
+    image: backend-task-2nd-round-image
+    container_name: backend-task-2nd-round-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
