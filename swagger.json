@@ -1,0 +1,191 @@
+
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Assignment for creating a simple microservice application with Node.js.",
+    "version": "1.0.0",
+    "title": "BACKEND TASK - 2nd Round",
+    "termsOfService": "https://github.com/key-joshua/backend-task-2nd-round/README.md ",
+    "contact": { "email": "k.joshua855@gmail.com" }
+  },
+
+  "hosts": "backend-task-2nd-round.herokuapp.com",
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Initial Route",
+      "description": "Initial/Fake Endpoint | GET Route"
+    },
+    
+    {
+      "name": "Employees Routes",
+      "description": "Employee/s endpoitns | GET ROUTE, DELETE ROUTE, UPDATE ROUTE"
+    }
+  ],
+  
+  "schemes": ["http","https"],
+  "consumes": ["application/json", "none"],
+  "produces": [ "application/json", "none"],
+  "paths": {
+
+    "/kslowpamf": {
+      "get": {
+        "tags": [ "Initial Route"],
+        "summary": " (Handle Intial/Fake GET Route)",
+        "description": "By the use of initial/fake GET endpoint, you will be able to see welcome message ( Welcome to backend-task-2nd-round )",
+        "responses": { "200": { "description": "Success. ( Welcome to Neotech Solutions Backend )" }, "404": { "description": "Not Found." }}
+      }
+    },
+
+    "/employees/select-employees?page={page}&limit={limit}": {
+      "get": {
+        "tags": [ "Employees Routes"],
+        "summary": " (Select Employees GET Route)",
+        "description": "By the use of this GET endpoint, you can select employees from our database",
+        "responses": { "200": { "description": "Ok." }, "404": { "description": "Not Found." }},
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "type": "integer",
+            "description": "parsing a page number"
+          },
+          {
+            "in": "path",
+            "name": "limit",
+            "type": "integer",
+            "description": "parsing a limit of data per page"
+          }
+        ]
+      }
+    },
+
+    "/employees/select-employee/{employeeId}": {
+      "get": {
+        "tags": [ "Employees Routes"],
+        "summary": " (Select Employee GET Route)",
+        "description": "By the use of this GET endpoint, you can select particular employee from our database",
+        "responses": { "200": { "description": "Ok." }, "404": { "description": "Not Found." }},
+        "parameters": [
+          {
+            "in": "path",
+            "name": "employeeId",
+            "type": "string",
+            "required": true,
+            "description": "Employee ID in Params"
+          }
+        ]
+      }
+    },
+
+    "/employees/delete-employee/{employeeId}": {
+      "delete": {
+        "tags": [ "Employees Routes"],
+        "summary": " (Delete Employee DELETE Route)",
+        "description": "By the use of this DELETE endpoint, you can delete employee in our database",
+        "responses": { "200": { "description": "Ok." }, "404": { "description": "Not Found." }},
+        "parameters": [
+          {
+            "in": "path",
+            "name": "employeeId",
+            "type": "string",
+            "required": true,
+            "description": "Employee ID in Params"
+          }
+        ]
+      }
+    },
+
+    "/employees/update-employee/{employeeId}": {
+      "patch": {
+        "tags": [ "Employees Routes"],
+        "summary": " (Update Employee UPDATE Route)",
+        "description": "By the use of this UPDATE endpoint, you can update employee details from our database",
+        "responses": { "200": { "description": "Ok." }, "404": { "description": "Not Found." }},
+        "parameters": [
+          {
+            "in": "path",
+            "name": "employeeId",
+            "type": "string",
+            "required": true,
+            "description": "Employee ID in Params"
+          },
+          { 
+            "type": "string", 
+            "in":"formData", 
+            "name":"name",  
+            "description":"user name"
+          },
+          { 
+            "type": "file",
+            "in":"formData", 
+            "name":"photo",  
+            "description":"user profile picture"
+          },
+          { 
+            "type": "string",
+            "in":"formData", 
+            "name":"email",  
+            "description":"employee's email"
+          },
+          { 
+            "type": "string", 
+            "in":"formData", 
+            "name":"phone",  
+            "description":"employee's phone"
+          },
+          { 
+            "type": "string", 
+            "in":"formData", 
+            "name":"dob",  
+            "description":"employee's birth date"
+          },
+          { 
+            "type": "string", 
+            "in":"formData", 
+            "name":"address",  
+            "description":"employee's address"
+          },
+          { 
+            "type": "string", 
+            "in":"formData", 
+            "name":"salary",  
+            "description":"employee's salary"
+          },
+          { 
+            "type": "string",
+            "in":"formData", 
+            "name":"employmentDate",  
+            "description":"employment date"
+          },
+          { 
+            "type": "string", 
+            "in":"formData", 
+            "name":"depertmentPosition",  
+            "description":"employee's position"
+          }
+        ]
+      }
+    }
+  },
+
+  "definitions": {
+    "updateEmployeeSchema": {
+      "type": "object",
+      "properties": {
+        "name":  { "type": "string", "required": false },
+        "photo": { "type": "string", "format": "email", "required": false },
+        "email":  { "type": "string", "format": "email", "required": false },
+        "phone":  { "type": "string", "example": "+250789612345", "required": false },
+        "dob":  { "type": "string", "format": "date-time", "example": "1900-01-01",  "required": false },
+        "address":  { "type": "string", "required": false },
+        "salary":  { "type": "string", "required": false },
+        "employmentDate":  { "type": "string", "format": "date-time", "example": "2000-01-01",  "required": true },
+        "depertmentPosition":  { "type": "string", "required": false }
+      }
+    }
+  }
+}
+
+     
