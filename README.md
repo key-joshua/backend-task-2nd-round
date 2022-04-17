@@ -21,10 +21,10 @@ https://github.com/key-joshua/backend-task-2nd-round
 
 ## Features
 
-- Select all employees.
-- Select particular employee.
-- delete an employee.
-- update an employee.
+- Select all records.
+- Select a particular record.
+- delete a particular record.
+- update a particular record.
 
 ## Test Backend Task 2nd round APIs
 
@@ -82,6 +82,7 @@ cd backend-task-2nd-round
 ```
 npm install
 ```
+- Setup well and carefully a file called ```.env```` by referring to ```.envexample```
 
 - And then to start running  this project on your machine , run this command:
 ```
@@ -93,5 +94,5 @@ npm run start
 npm run kill
 ```
 ```
-- npm run test
+npm run test
 ```
