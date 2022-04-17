@@ -1,7 +1,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1d78d8d35c44964eeeff/maintainability)](https://codeclimate.com/github/key-joshua/backend-task-2nd-round/maintainability)
 [![CircleCI](https://circleci.com/gh/key-joshua/backend-task-2nd-round/tree/develop.svg?style=svg)](https://circleci.com/gh/key-joshua/backend-task-2nd-round/tree/develop)
 [![Coverage Status](https://coveralls.io/repos/github/key-joshua/backend-task-2nd-round/badge.svg?branch=main)](https://coveralls.io/github/key-joshua/backend-task-2nd-round?branch=main)
-[![codecov](https://codecov.io/gh/key-joshua/backend-task-2nd-round/branch/develop/graph/badge.svg?token=7ZU0CSQJQD)](https://codecov.io/gh/key-joshua/backend-task-2nd-round)
+[![codecov](https://codecov.io/gh/key-joshua/backend-task-2nd-round/branch/main/graph/badge.svg?token=wSbmlMz2v9)](https://codecov.io/gh/key-joshua/backend-task-2nd-round)
 
 # BACKEND TASK - 2nd Round
 
