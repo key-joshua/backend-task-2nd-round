@@ -82,7 +82,7 @@ cd backend-task-2nd-round
 ```
 npm install
 ```
-- Setup well and carefully a file called  ```.env``` file by referring to ```.envexample```
+- Setup well and carefully a file called  ```.env``` file by referring to ```.envexample``` fie
 
 - And then to start running  this project on your machine , run this command:
 ```
