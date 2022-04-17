@@ -1,4 +1,6 @@
 node_modules
-backup_database
 .vscode
 .env
+*.lcov
+.nyc_output
+coverage
