@@ -9,8 +9,8 @@
     "contact": { "email": "k.joshua855@gmail.com" }
   },
 
-  "hosts": "backend-task-2nd-round.herokuapp.com",
-  "host": "localhost:3000",
+  "host": "backend-task-2nd-round.herokuapp.com",
+  "localhost": "localhost:3000",
   "basePath": "/api",
   "tags": [
     {
