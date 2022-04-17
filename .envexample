@@ -1,5 +1,5 @@
-DB=ADD_YOUR_MONGO_DATABASE_URL
-PORT=ADD_YOUR_LOCAL_PORT
+DB=mongodb+srv://Joshua:key07202020@saloneverywheredb.oegaa.mongodb.net/backendTask?retryWrites=true&w=majority&ssl=true
+PORT=3000
 
 SECRETACCESSKEY=ADD_YOUR_AWS_SECRET_KEY
 ACCESSKEYID=ADD_YOUR_AWS_ACCESS_KEY
