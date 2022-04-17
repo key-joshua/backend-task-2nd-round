@@ -16,7 +16,7 @@ class EmployeeHelper {
    * @returns {object} of employee detatils.
    */
   static async findOneEmployees(attribute, value) {
-    const data = await EmployeeSchema.findOne({ [attribute]: value });
+    const data = await EmployeeSchema.findOne({ [attribute]: value }).populate('depertmentId');
     return data;
   }
 
@@ -38,7 +38,7 @@ class EmployeeHelper {
    * @returns {object} of all employees.
    */
   static async findEmployees(skip, start) {
-    const data = await EmployeeSchema.find().skip(start).limit(skip);
+    const data = await EmployeeSchema.find().populate('depertmentId').skip(start).limit(skip);
     return data;
   }
 

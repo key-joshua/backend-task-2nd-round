@@ -11,7 +11,7 @@ const EmployeeSchema = new Schema({
   address: { type: String, required: [true, 'address is required'] },
   salary: { type: String, required: [true, 'salary is required'] },
   employmentDate: { type: String, required: [true, 'employmentDate is required'] },
-  depertmentId: [{ type: Schema.Types.ObjectId, ref: 'Depertments' }],
+  depertmentId: { type: Schema.Types.ObjectId, ref: 'Depertments' },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });
