@@ -30,11 +30,11 @@ https://github.com/key-joshua/backend-task-2nd-round
 
 Before we get started Remember to take  :coffee:   :pizza:  and :dancer:  When You Are coding, come on Dude it all about relax
 
-### Backend tools
+### Backend Tools
 
  - All Neccessary libraries.
  - Express JS.
- - NodeJs.
+ - NodeJs v14.
 
 #### TABLE OF API ENDPOINTS SPECIFICATION AND DESCRIPTION
 
